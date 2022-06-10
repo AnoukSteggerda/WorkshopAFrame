@@ -4,18 +4,20 @@ var myOtherBox = document.getElementById('myOtherBox');
 
 function spin(){
 	myOtherBox.object3D.rotation.x += rotationSpeed;
+	myOtherBox.object3D.rotation.y += rotationSpeed;
+	myOtherBox.object3D.rotation.z += rotationSpeed/2;
 	console.log(earth.object3D.rotation);
 }
 setInterval(spin, 10);
 
 
 myOtherBox.addEventListener('mouseenter', function(){
-	rotationSpeed = 0.03;
+	rotationSpeed = 0.01;
 	console.log('entered');
 });
 
 myOtherBox.addEventListener('mouseleave', function(){
-	rotationSpeed = 0.003;
+	rotationSpeed = 0.001;
 	console.log('left');
 });
 
